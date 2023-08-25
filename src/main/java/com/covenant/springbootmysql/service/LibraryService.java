@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 @RequiredArgsConstructor
 public class LibraryService {
@@ -121,7 +122,7 @@ public class LibraryService {
                 lend.setMember(memberForId.get());
                 lend.setBook(bookForId.get());
                 lend.setStatus(LendStatus.BURROWED);
-                lend.setStartOn(Instant.now());
+                lend.setStarOn(Instant.now());
                 lend.setDueOn(Instant.now().plus(30, ChronoUnit.DAYS));
                 lendRepository.save(lend);
             }

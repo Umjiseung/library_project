@@ -2,10 +2,14 @@ package com.covenant.springbootmysql.model;
 
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.Instant;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "lend")
 public class Lend {
